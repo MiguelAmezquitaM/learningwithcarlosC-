@@ -46,15 +46,11 @@ void print_list(string list[], const int tam)
 
 void order_list(string list[], const int tam)
 {
-    int i = 0, j = 1;
+    int i = -1, j = 0;
 
-    while (i < tam - 1)
-    {
+    while (++i < tam - 1 && ++j < tam)
         while (j > 0 && list[i] > list[j])
             exchange(&list[i--], &list[j--]);
-        i++;
-        j++;
-    }
 }
 
 void exchange(string *a, string *b)
