@@ -63,47 +63,31 @@ _________________________________________________________________
 
 // 1. define una funcion que imprima un vector
 
-void show_vec(int vector[], int tam){
-    cout<< "[  "  ;
+void show_vec(int vector[], int tam)
+{
+    cout << "[  ";
     for (int i = 0; i < tam; i++)
     {
-        cout<< vector[i] <<"  "; 
+        cout << vector[i] << "  ";
     }
-    cout<<"]\n";
+    cout << "]\n";
 }
 
-//   0  1  2  3
-//  vec[0]  vec[1]  vec[2]  vec[3]
-// [ 3  8  9  0 ]
+int mult_vec(int vector[], int tam)
+{
+    int multiplicacion = 1;
 
+    for (int i = 0; i < tam; i++)
+        multiplicacion *= vector[i];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return multiplicacion;
+}
 
 int main(int argc, char const *argv[])
 {
-    int vec[5] = { 3, 4, 5, 2, 5};
+    int vec[5] = {31, 42, 25, 62, 45};
 
-    show_vec(vec, 5);
+    cout << "la multiplicacion es: " << mult_vec(vec, 5) << endl;
 
     return 0;
 }
